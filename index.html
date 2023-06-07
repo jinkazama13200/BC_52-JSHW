@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS HW</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!-- my css  -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body class="bg-success">
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main>
+      <!-- Bài Tập 1 -->
+      <div class="Bai_1 ms-5">
+        <h1 class="mb-3">Bài Tập 1</h1>
+        <h2>Tính tiền lương nhân viên</h2>
+        <form action="" class="d-flex gap-3 mb-3">
+          <input
+            id="input-salary"
+            class="form-control w-25 p-3"
+            type="number"
+            placeholder="Nhập lương một ngày"
+          />
+          <input
+            id="input-day"
+            class="form-control w-25"
+            type="number"
+            placeholder="Nhập số ngày làm"
+          />
+        </form>
+        <button onclick="click1()" class="btn btn-primary mb-5 px-5">
+          Tính
+        </button>
+        <div id="tienLuong" class="bg-success">
+          <h2 class="text-warning">
+            Tiền Lương:
+            <span id="xuatVND"></span> VND
+          </h2>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Bài Tập 2 -->
+      <div class="Bai_2 ms-5">
+        <h1 class="mb-3">Bài Tập 2</h1>
+        <h2>Tính tỷ giá USD</h2>
+        <form action="" class="d-flex gap-3 mb-3">
+          <input
+            id="input-usd"
+            class="form-control w-25 p-3"
+            type="number"
+            placeholder="Nhập số tiền USD"
+          />
+        </form>
+        <button onclick="click2()" class="btn btn-primary mb-5 px-5">
+          Tính
+        </button>
+        <div id="tienUSD" class="bg-success">
+          <h2 class="text-warning">
+            Tiền VND quy đổi:
+            <span id="xuatUSD"></span> VND
+          </h2>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Bài Tập 3 -->
+      <div class="Bai_3 ms-5">
+        <h1>Tính diện tich, chu vi HCN</h1>
+        <input
+          id="input-cdai"
+          type="number"
+          placeholder="Nhập chiều dài"
+          class="p-2 me-3"
+        />
+        <input
+          id="input-crong"
+          type="number"
+          placeholder="Nhập chiểu rộng"
+          class="p-2"
+        />
+        <button onclick="click3()" class="btn btn-primary d-block mt-4 px-5">
+          Tính
+        </button>
+        <div id="ketqua1" class="bg-success text-warning mt-5">
+          <h2>
+            Diện tích:<span id="kqdtich"></span> | Chu Vi:<span
+              id="kqchuvi"
+            ></span>
+          </h2>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Bài tập 4 -->
+      <div class="Bai_4 ms-5">
+        <h1>Tính giá trị trung bình</h1>
+        <input
+          id="input-num1"
+          class="form-control mb-3 w-25"
+          type="number"
+          placeholder="Nhập số thứ 1"
+        />
+        <input
+          id="input-num2"
+          class="form-control mb-3 w-25"
+          type="number"
+          placeholder="Nhập số thứ 2"
+        />
+        <input
+          id="input-num3"
+          class="form-control mb-3 w-25"
+          type="number"
+          placeholder="Nhập số thứ 3"
+        />
+        <input
+          id="input-num4"
+          class="form-control mb-3 w-25"
+          type="number"
+          placeholder="Nhập số thứ 4"
+        />
+        <input
+          id="input-num5"
+          class="form-control w-25"
+          type="number"
+          placeholder="Nhập số thứ 5"
+        />
+        <button onclick="ex4()" class="btn btn-primary px-5 d-block mt-4">
+          Tính
+        </button>
+        <div id="ketqua4" class="bg-success text-warning mt-5">
+          <h2>
+            Giá trị trung bình:
+            <span id="kqtrungbinh"></span>
+          </h2>
+        </div>
+      </div>
+
+      <hr />
+      <!-- Bài Tập 5 -->
+      <div class="Bai_5 ms-5">
+        <h1>Tính tổng 2 ký số</h1>
+        <input
+          id="input-sum"
+          class="form-control w-25 p-3 mb-4"
+          type="number"
+          placeholder="Nhập 2 chữ số"
+        />
+        <button onclick="ex5()" class="btn btn-primary d-inline-block px-5">
+          Tính
+        </button>
+        <div id="ketqua2" class="bg-success text-warning mt-4">
+          <h2>
+            Kết quả:
+            <span id="tong"></span>
+          </h2>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
